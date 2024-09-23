@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Safari from "../components/magicui/Safari";
 import "./globals.css";
+import Meteors from "../components/magicui/Meteors";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,9 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative bg-blue-600 bg-texture min-h-screen flex items-center justify-center`}
       >
-        {children}
+        <div className="relative">
+            <div className="flex flex-col justify-center h-full px-[35px]">
+              {children}
+            </div>
+        </div>
+
       </body>
     </html>
   );
