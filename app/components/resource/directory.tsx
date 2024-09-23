@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useResource } from "./hooks/useResource";
 import { useResourceSelection } from "./hooks/useResourceSelection";
 import { useRecoilValue } from "recoil";
-import { resourceDataMapState } from "../../state/atoms";
 import { Resource as ResourceType } from "../../api/requests/resources/types";
 import { Resource } from "./resource";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../../../components/ui/accordion";

@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { AuthorizationService } from '../../services/authorizationService';
-import { useQuery } from '@tanstack/react-query';
 import { KnowledgeBase, KnowledgeBaseResponse } from './types';
 export const LIST_KNOWLEDGE_BASES_QUERY_KEY = ['list_knowledge_bases'];
 

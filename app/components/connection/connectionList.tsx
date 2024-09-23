@@ -7,7 +7,7 @@ import { LoadingSkeleton } from "../common/loadingSkeleton";
 import ShinyButton from "@/components/magicui/shiny-button";
 import { Connection } from "../../api/requests/connections/types";
 
-const ConnectionButton = memo(({ connection, isSelected, onClick }: { connection: Connection; isSelected: boolean; onClick: () => void }) => (
+const ConnectionButton = memo(({ connection, onClick }: { connection: Connection; onClick: () => void }) => (
   <ShinyButton onClick={onClick}>
     {connection.name}
   </ShinyButton>
@@ -17,7 +17,7 @@ ConnectionButton.displayName = 'ConnectionButton';
 
 export const ConnectionList: React.FC = () => {
     const [selectedConnection, setSelectedConnection] = useRecoilState(selectedConnectionState);
-    const { data: connections, isLoading, error } = useListConnections();
+    const { data: connections, isLoading } = useListConnections();
     const [autoSelected, setAutoSelected] = useState<boolean>(false);
   
     useEffect(() => {
@@ -48,7 +48,6 @@ export const ConnectionList: React.FC = () => {
             <li key={connection.connection_id} role="option" aria-selected={selectedConnection === connection.connection_id}>
               <ConnectionButton
                 connection={connection}
-                isSelected={selectedConnection === connection.connection_id}
                 onClick={() => handleConnectionSelect(connection.connection_id)}
               />
             </li>
@@ -56,7 +55,7 @@ export const ConnectionList: React.FC = () => {
         </ul>
         {autoSelected && (
           <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-2 mt-2" role="alert">
-            <p className="text-xs">Your integration was automatically selected as it's the only one available.</p>
+            <p className="text-xs">Your integration was automatically selected as it&apos;s the only one available.</p>
           </div>
         )}
       </div>

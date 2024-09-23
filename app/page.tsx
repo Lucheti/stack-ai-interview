@@ -3,15 +3,14 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { RecoilRoot } from 'recoil';
 import { queryClient } from './api/queryClient';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ConnectionList } from "./components/connection/connectionList";
 import { FileTree } from "./components/fileTree/fileTree";
 import { CreateKnowledgeBaseButton } from "./components/knowledgeBase/createKnowledgeBaseButton";
 import { FadeText } from "@/components/magicui/fade-text";
 import { KnowledgeBaseList } from "./components/knowledgeBase/knowledgeBaseList";
-import { Separator } from '@/components/ui/separator';
-import { AuthorizationService } from './api/services/authorizationService'; // Import AuthService
+import { AuthorizationService } from './api/services/authorizationService';
 
 const HomeContent = () => {
   const router = useRouter();

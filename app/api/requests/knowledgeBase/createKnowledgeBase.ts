@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { AuthorizationService } from '../../services/authorizationService';
-import { useMutation } from '@tanstack/react-query';
 import { KnowledgeBase } from './types';
 export const CREATE_KNOWLEDGE_BASE_QUERY_KEY = ['knowledge_bases'];
 

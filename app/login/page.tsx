@@ -23,7 +23,7 @@ export default function LoginPage() {
       // If authorization is successful, redirect to the home page
       router.push('/');
     } catch (err) {
-
+      console.log(err)
       setError('Invalid email or password')
     }
   }

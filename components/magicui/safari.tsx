@@ -1,4 +1,4 @@
-import { SVGProps, ReactNode } from "react";
+import React, { SVGProps, ReactNode } from "react";
 
 export interface SafariProps extends SVGProps<SVGSVGElement> {
   url?: string;
@@ -9,7 +9,6 @@ export interface SafariProps extends SVGProps<SVGSVGElement> {
 }
 
 export default function Safari({
-  src,
   url,
   width = 1203,
   height = 753,

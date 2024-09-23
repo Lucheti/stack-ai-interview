@@ -1,7 +1,6 @@
 import { atom, selector } from 'recoil';
 import { Resource } from '../api/requests/resources/types';
 import { KnowledgeBase } from '../api/requests/knowledgeBase/types';
-import { getAllParentsFromResource } from '../utils/getAllParentsFromResource';
 export const selectedConnectionState = atom<string | null>({
     key: 'selectedConnectionState',
     default: null,

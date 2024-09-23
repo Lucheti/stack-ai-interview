@@ -48,7 +48,7 @@ export const useListResources = (connectionId: string, resourceId?: string, enab
                 return newMap;
             });
         }
-    }, [data]);
+    }, [data, setResourceDataMap]);
 
     return { data, isLoading, error };
 }

@@ -9,14 +9,14 @@ import { knowledgeBasesState, knowledgeBaseResourcesState } from "../../state/at
 import { KnowledgeBase } from "../../api/requests/knowledgeBase/types";
 import { LoadingSkeleton } from "../common/loadingSkeleton";
 import { Trash2Icon } from "lucide-react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../../../components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "../../../components/ui/dialog";
 import { Button } from "../../../components/ui/button";
 import { Resource } from "../../api/requests/resources/types";
 
 const EmptyKnowledgeBaseList = () => (
   <div className="p-4 bg-white rounded-lg h-[400px] overflow-auto">
     <h1 className="text-lg font-semibold mb-2 text-gray-800">Knowledge Base Overview</h1>
-    <p className="text-gray-600 mb-4 text-xs">You haven't created any knowledge bases yet.</p>
+    <p className="text-gray-600 mb-4 text-xs">You haven&apos;t created any knowledge bases yet.</p>
   </div>
 );
 

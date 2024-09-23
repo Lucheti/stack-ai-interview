@@ -1,11 +1,10 @@
 import { useRecoilState, useRecoilValue } from "recoil";
-import { selectedResourcesState, selectedConnectionState, resourceDataMapState } from "../../../state/atoms";
+import { selectedResourcesState, resourceDataMapState } from "../../../state/atoms";
 import { useCallback } from "react";
 import { getAllChildrenFromResource } from "../../../utils/getAllChildrenFromResource";
 
 export const useResourceSelection = () => {
     const [selectedResources, setSelectedResources] = useRecoilState(selectedResourcesState);
-    const selectedConnection = useRecoilValue(selectedConnectionState);
     const resourceDataMap = useRecoilValue(resourceDataMapState);
   
     const toggleResourceSelection = useCallback((resourcePath: string, checked: boolean) => {
@@ -21,7 +20,7 @@ export const useResourceSelection = () => {
         else allResources.forEach(resource => newSet.delete(resource));
         return newSet;
       });
-    }, [setSelectedResources, selectedConnection, resourceDataMap]);
+    }, [setSelectedResources, resourceDataMap]);
   
     const isResourceSelected = useCallback((resourcePath: string) => {
       return Array.from(selectedResources).some(selectedPath => selectedPath.includes(resourcePath));

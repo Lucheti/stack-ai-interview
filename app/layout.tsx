@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Safari from "../components/magicui/Safari";
 import "./globals.css";
-import Meteors from "../components/magicui/Meteors";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
